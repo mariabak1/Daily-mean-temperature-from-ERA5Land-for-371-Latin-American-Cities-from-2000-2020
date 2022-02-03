@@ -1,6 +1,5 @@
 
-# Daily mean temperature data - ERA5Land
-## Sample of 371 Latin American Cities from 1996-2015
+# Daily mean temperature data from ERA5Land for a sample of 371 Latin American Cities from 1996-2015
 ### Oct 21, 2020
 
 Many researchers involved in SALURBAL are interested in using historical temperature reanalysis data. ERA5Land data neglects pixels that have more than 50% water. However, many cities across the world are situated next to the ocean. Since we were losing information, our team interpolated data from ERA5 (at a 31km x 31km resolution) and imputed it at the ERA5Land 9km x 9km resolution, filling the gaps from those "missing" pixels.
