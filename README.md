@@ -3,9 +3,9 @@
 ## Sample of 371 Latin American Cities from 1996-2015
 ### Oct 21, 2020
 
-Many researchers involved in SALURBAL are interested in using historical temperature reanalysis data. ERA5Land data neglects pixels that have more than 50% water. However, many cities across the world are situated next to the ocean. Since we were losing information, our team interpolated data from ERA5 (at a 30km x 30km resolution) and imputed it at the ERA5Land 9km x 9km resolution, filling the gaps from those "missing" pixels.
+Many researchers involved in SALURBAL are interested in using historical temperature reanalysis data. ERA5Land data neglects pixels that have more than 50% water. However, many cities across the world are situated next to the ocean. Since we were losing information, our team interpolated data from ERA5 (at a 31km x 31km resolution) and imputed it at the ERA5Land 9km x 9km resolution, filling the gaps from those "missing" pixels.
 
-Because many SALURBAL researchers are interested in investigating temperature as exposure in relation to various health outcomes, after imputation we weighted the temperature pixels by population to better approximate population exposure. Specifically, we used the 2010 estimates of the spatial distribution of population from WorldPop (100m x 100m). For the cities in Panama and Peru we weighted temperature by the 2010 Global Urban Footprint dataset because population data is not as accurate for Panama and Peru. After population-weighting, we computed mean daily temperature over 1996-2015 for different types of SALURBAL geographies -- cities (AD), sub-cities (L2), and cities' urban extent (UX). 
+One of SALURBAL's objectives is investigating temperature as exposure in relation to various health outcomes, after imputation we weighted the temperature pixels by population to better approximate population exposure. Specifically, we used the 2010 estimates of the spatial distribution of population from WorldPop (100m x 100m). For the cities in Panama and Peru we weighted temperature by the 2010 Global Urban Footprint dataset because population data is not as accurate for Panama and Peru. After population-weighting, we computed mean daily temperature over 1996-2015 for different types of SALURBAL geographies -- cities (AD), sub-cities (L2), and cities' urban extent (UX). 
 
 ### Access to raw data:
 - [ERA5 hourly data on single levels](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview)
@@ -30,7 +30,7 @@ To impute the missing values, we built the following model for each day and geog
 </p>
 
 where:
-- <img src="https://render.githubusercontent.com/render/math?math=$X$"> is a vector including resampled ERA5 temperature from 31 km resolution to 9 km resolution with cubic resampling, absolute elevation (9 km resolution), relative elevation (elevation difference of a 9 by 9 km pixel and its surroundings), and aspect (9 km resolution);  
+- <img src="https://render.githubusercontent.com/render/math?math=$X$"> is a vector including resampled ERA5 temperature from 31 km resolution to 9 km resolution with cubic resampling, absolute elevation (9 km resolution), relative elevation (elevation difference of a 9x9 km pixel and its surroundings), and aspect (9 km resolution);  
 - <img src="https://render.githubusercontent.com/render/math?math=f(X)"> is a function that uses X to regress ERA5land temperature. Here we used random forest regression.  
 - <img src="https://render.githubusercontent.com/render/math?math=\epsilon"> is the residual, or <img src="https://render.githubusercontent.com/render/math?math=ERA5land-f(X)">, which we further modeled with kriging spatial interpolation.  
 
