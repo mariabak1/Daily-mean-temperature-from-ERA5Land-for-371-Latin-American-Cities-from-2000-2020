@@ -53,31 +53,28 @@ where 〖area〗_i is the area of the overlap between grid cell i and the spatia
 
 
 **Notes**:  
-- The final tables are L1_AD_UX_96_15.csv, **L1_ADUX_wp_2001_2015_v3.csv**, **L2_2001_2015_v3.csv**, and **L2_wp_2001_2015_v3.csv**. The files containing "wp" have population weighted temperature means for all cities including Panama and Peru. **L1_ADUX_2001_2015_v3.csv** and **L2_2001_2015_v3.csv** have population weighted temperature means for all cities except Panama and Peru that have GUF weighted temperature means for cities in those countries.  
-- To make the data processing faster, download the [RData files](https://drive.google.com/drive/folders/1GSB6qLZN1eJo2-tNh7gWSReZgAo6p8gk) for L1 or L2.  
-- Make sure to run the processes differently for leap years. Leap years (2004, 2008, and 2012) are processed using 366 instead of 365 days in a year within the loop.
-
+- The final tables of population-weighted mean daily temperature are L1AD_UX_96_15.csv and L2_96_15.csv. 
 ---
 
-**Codebook for L1:**  
+**Codebook for [L1AD and UX data](https://drive.google.com/file/d/1Is1w0Oq5boAW6SlGlMWNP3C1IeiRey8R/view?usp=sharing):**  
 - SALID1: City ID. (6 digits)
-- ADtemp_pw: Population weighted temperature mean at L1AD level. 
-- ADtemp_x: Unweighted temperature mean at L1AD level. 
-- UXtemp_pw:Population weighted temperature mean at L1UXX level. 
-- UXtemp_x:  Unweighted temperature mean at L1UX level. 
+- ADtemp_pw: Population weighted temperature mean at L1AD level (city-level). 
+- ADtemp_x: Unweighted temperature mean at L1AD level (city-level). 
+- UXtemp_pw:Population weighted temperature mean at L1UX level (urban extent). 
+- UXtemp_x:  Unweighted temperature mean at L1UX level (urban extent). 
 - date: year-month-day.
 
-Preview *L1_2001_2015_v3.csv*:  
+Preview *L1AD_UX_96_15.csv*:  
 
 <img src="scripts/L1_preview.png" align="center" width="60%">
 
-**Codebook for L2:**  
-- SALID2: City ID (8 digits). 
-- L2temp_pw: Population weighted temperature mean at L2 level. 
-- L2temp_x: Unweighted temperature mean at L2 level. 
+**Codebook for [L2 data](https://drive.google.com/file/d/1oa72qk_2zzbePTr9kCKzKs4DxhZl7I5Z/view?usp=sharing):**  
+- SALID2: Sub-city ID (8 digits). 
+- L2temp_pw: Population weighted temperature mean at L2 level (sub-city). 
+- L2temp_x: Unweighted temperature mean at L2 level (sub-city). 
 - date: year-month-day. 
 
-Preview *L2_2001_2015_v3.csv*:  
+Preview *L2_96_15.csv*:  
 
 <img src="scripts/L2_preview.png" align="center" width="40%">
 
