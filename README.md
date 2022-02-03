@@ -2,7 +2,7 @@
 # Computing daily mean temperature from ERA5Land for 371 Latin American Cities from 1996-2015
 ### Oct 21, 2020
 
-Many researchers involved in SALURBAL are interested in using historical temperature reanalysis data. ERA5Land data neglects pixels that have more than 50% water. However, many cities across the world are situated next to the ocean. Since we were losing information, our team interpolated data from ERA5 (at a 31km x 31km resolution) and imputed it at the ERA5Land 9km x 9km resolution, filling the gaps from those "missing" pixels.
+Many researchers involved in [SALURBAL](https://drexel.edu/lac/salurbal/overview/) are interested in using historical temperature reanalysis data. ERA5Land data neglects pixels that have more than 50% water. However, many cities across the world are situated next to the ocean. Since we were losing information, our team interpolated data from ERA5 (at a 31km x 31km resolution) and imputed it at the ERA5Land 9km x 9km resolution, filling the gaps from those "missing" pixels.
 
 One of SALURBAL's objectives is investigating temperature as exposure in relation to various health outcomes, so after imputation we weighted the temperature pixels by population to better approximate population exposure. Specifically, we used the 2010 estimates of the spatial distribution of population from WorldPop (100m x 100m). For the cities in Panama and Peru we weighted temperature by the 2010 Global Urban Footprint dataset because population data is not as accurate for Panama and Peru. After population-weighting, we computed mean daily temperature over 1996-2015 for different types of SALURBAL geographies -- cities (AD), sub-cities (L2), and cities' urban extent (UX). 
 
