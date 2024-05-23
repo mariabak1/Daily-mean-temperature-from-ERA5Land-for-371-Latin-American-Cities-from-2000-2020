@@ -23,7 +23,9 @@ For both datasets, you can specify what geographical region, years, months, vari
 
 ## 2. Data Imputation
 
-ERA5Land data neglects pixels that have more than 50% water. However, many cities across the world are situated next to the ocean. To prevent missing (incomplete) temperature data from coastal cities, our team interpolated data from ERA5 (at a 31km x 31km resolution) and imputed it at the ERA5Land 9km x 9km resolution, filling the gaps from those "missing" pixels. This ensured that the ambient 2 meter temperature from ERA5Land covered the entire spatial extent of SALURBAL cities.
+ERA5Land data neglects pixels that have more than 50% water. However, many cities across the world are situated next to the ocean. To prevent missing (incomplete) temperature data from coastal cities, our team interpolated data from ERA5 (at a 31km x 31km resolution) and imputed it at the ERA5Land 9km x 9km resolution, filling the gaps from those "missing" pixels. This ensured that the ambient 2 meter temperature from ERA5Land covered the entire spatial extent of SALURBAL cities. 
+
+Here is an example of missing pixels for Pisco, Peru:
 
 ![Example of missing pixels for Pisco, Peru](https://github.com/mariabak1/Daily-mean-temperature-from-ERA5Land-for-371-Latin-American-Cities-from-2000-2020/assets/67489014/b3aa9255-ea95-480d-83b2-b50b801ee846)
 
@@ -85,25 +87,17 @@ Code to obtain mean daily temperature
  - [Run this code to compute population-weighted (and unweigted) mean daily temperature](scripts/5_era5land_popweights.R)
 
 
-### Access to raw data:
+
+
+## Access to raw data:
 - [ERA5Land](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=overview)
 - [ERA5](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-single-levels?tab=overview) 
 - [WorldPop data](https://hub.worldpop.org/geodata/listing?id=64)
 
-### Access to imputed data:
-- [ERA5Land imputed data]()
-
-### Access to processed data files (mean daily temperature for SALURBAL units):
-- [L1 AD and UX data](https://drive.google.com/file/d/1Is1w0Oq5boAW6SlGlMWNP3C1IeiRey8R/view?usp=sharing)
-- [L2 data](https://drive.google.com/file/d/1oa72qk_2zzbePTr9kCKzKs4DxhZl7I5Z/view?usp=sharing)
-
----
+## For access to processed data contact mariab@berkeley.edu
 
 
-
----
-
-**Codebook for [L1AD and UX data](https://drive.google.com/file/d/1Is1w0Oq5boAW6SlGlMWNP3C1IeiRey8R/view?usp=sharing):**  
+**Codebook for [L1AD and UX data]**  
 - SALID1: City ID. (6 digits)
 - L1ADtemp_pw: Population weighted temperature mean at L1AD level (city-level). 
 - L1ADtemp_x: Unweighted temperature mean at L1AD level (city-level). 
@@ -111,17 +105,17 @@ Code to obtain mean daily temperature
 - L1UXtemp_x:  Unweighted temperature mean at L1UX level (urban extent). 
 - date: year-month-day.
 
-Preview *L1AD_UX_96_15.csv*:  
+L1AD/UX Dataset Preview: 
 
 <img src="scripts/L1_preview.png" align="center" width="60%">
 
-**Codebook for [L2 data](https://drive.google.com/file/d/1oa72qk_2zzbePTr9kCKzKs4DxhZl7I5Z/view?usp=sharing):**  
+**Codebook for [L2 data]**  
 - SALID2: Sub-city ID (8 digits). 
 - L2temp_pw: Population weighted temperature mean at L2 level (sub-city). 
 - L2temp_x: Unweighted temperature mean at L2 level (sub-city). 
 - date: year-month-day. 
 
-Preview *L2_96_15.csv*:  
+L2 Dataset Preview:
 
 <img src="scripts/L2_preview.png" align="center" width="40%">
 
