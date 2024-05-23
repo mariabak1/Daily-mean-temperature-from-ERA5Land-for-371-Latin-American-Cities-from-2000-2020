@@ -79,6 +79,7 @@ $$
 where <code>area<sub>i</sub></code> is the area of the overlap between grid cell i and the spatial unit; <code>population(WorldPop)<sub>i</sub></code> is the WorldPop population of grid cell i.
 
 
+
 Code to obtain mean daily temperature
  - [First run this script to resample WorldPop](scripts/4_crop_world_pop.R)
  - [Run this code to compute population-weighted (and unweigted) mean daily temperature](scripts/5_era5land_popweights.R)
