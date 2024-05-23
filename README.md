@@ -1,7 +1,7 @@
 
 # Computing daily mean temperature from ERA5Land for 371 Latin American Cities from 2000-2015
 
-Accociations between heat and mortality are one of the main interest of researchers involved in [SALURBAL-Climate](https://drexel.edu/lac/salurbal/overview/). SALURBAL-Climate uses temperature data from the ERA5Land reanalysis dataset. Here we explain the processing of temperature data. 
+Accociations between heat and mortality are one of the main interests of researchers involved in [SALURBAL-Climate](https://drexel.edu/lac/salurbal/overview/). SALURBAL-Climate uses temperature data from the ERA5Land reanalysis dataset. Here we explain the processing of temperature data. 
 ## 1. Data Download
 
 Download temperature data from [Copernicus](https://cds.climate.copernicus.eu/cdsapp#!/dataset/reanalysis-era5-land?tab=overview). ERA5Land compiles land surface temperature data, while ERA5 compiles surface temperature data for land and water. The boundaries of coastal cities often contain water, so only using ERA5Land means that we’d miss a portion of temperature data for these cities. Therefore, we download two datasets and explain the imputation below. You should get .nc files as the output.
